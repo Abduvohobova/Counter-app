@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+.container{
+    border: 20px double blue;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .dayNight{
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 40px;
+        display: flex;
+        color: goldenrod;
+        padding: 10px;
+        cursor: pointer;
+        #sun{
+            display: none;
+        }
+    }
+    .counter{
+        border: 15px dotted #dc00dc;
+        max-width: 600px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        h1{
+            color: darkblue;
+            text-align: center;
+            font-family: monospace;
+            text-transform: capitalize;
+            font-size: 40px;
+        }
+        #text{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+            button{
+                font-size: 18px;
+                font-weight: 600;
+                border: 4px dotted;
+                border-radius: 10px;
+                padding: 8px;
+                background: none;
+                text-transform: capitalize;
+                cursor: pointer;
+            }
+            button:active{
+                background: none;
+            }
+            button:nth-child(1){
+                color: red;
+            }
+            button:nth-child(2){
+                color: #d200d2;
+            }
+            button:nth-child(3){
+                color: blue;
+            }
+            button:nth-child(4){
+                color: #dfa000;
+            }
+
+        }
+        .card{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: sans-serif;
+            button{
+                width: 80px;
+                height: 60px;
+                font-size: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #5959ff;
+                color: white;
+                border: 0;
+                border-radius: 15px;
+                cursor: pointer;
+            }
+            button:hover{
+                background-color: #0088ff;
+            }
+            button:active{
+                background-color: #5959ff;
+            }
+            div{
+                width: 200px;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 32px;
+                font-weight: 600;
+                border-radius: 15px;
+                background-color: #ffc0f6;
+            }
+                #reset{
+                    font-size: 24px;
+                    padding: 10px 20px;
+                    border-radius: 15px;
+                    font-weight: 600;
+                    color: #008d8f;
+                    background-color: #d4fffb;
+                    border: 1px dashed;
+                    cursor: pointer;
+                    width: 120px;
+                }
+                #reset:hover{
+                    background-color: #008d8f;
+                    color: #fff;
+                }
+                #reset:active{
+                    background-color: #d4fffb;
+                    color: #0037ff;
+                }
+            }
+        }
+    }
+@media (max-width: 450px) {
+    .container{
+        max-width: 450px;
+        height: 0%;
+        padding: 50px 20px;
+        border: 10px double blue;
+        .dayNight{
+            div{
+                font-size: 30px;
+            }
+        }
+        .counter{
+            padding: 20px;
+            max-width: 400px;
+            border: 10px dotted #dc00dc;
+            gap: 40px;
+            #text{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                button{
+                    font-size: 14px;
+                    border: 3px dotted;
+                }
+            }
+            .card{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                gap: 10px;
+                row-gap: 15px;
+            }
+        }
+    }
+}
